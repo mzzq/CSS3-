@@ -1,0 +1,235 @@
+.loader_waper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  background-color: #d55400;
+}
+.loader_waper > div {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.loader:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin1 2s linear infinite normal;
+  animation: spin1 2s linear infinite normal;
+}
+.loader:nth-child(3) > div {
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin2 2s linear 200ms infinite normal;
+  animation: spin2 2s linear 200ms infinite normal;
+}
+.loader:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin3 2s linear 400ms infinite normal;
+  animation: spin3 2s linear 400ms infinite normal;
+}
+.loader:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin4 2s linear 200ms infinite normal;
+  animation: spin4 2s linear 200ms infinite normal;
+}
+.loader:nth-child(2) > div {
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin5 2s linear 450ms infinite normal;
+  animation: spin5 2s linear 450ms infinite normal;
+}
+.loader:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin6 2s linear 500ms infinite normal;
+  animation: spin6 2s linear 500ms infinite normal;
+}
+.loader:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin7 2s linear 400ms infinite normal;
+  animation: spin7 2s linear 400ms infinite normal;
+}
+.loader:nth-child(1) > div {
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin8 2s linear 500ms infinite normal;
+  animation: spin8 2s linear 500ms infinite normal;
+}
+.loader:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  background-color: #fffdfd;
+  -webkit-animation: spin9 2s linear 600ms infinite normal;
+  animation: spin9 2s linear 600ms infinite normal;
+}
+.loader_waper::after {
+  content: "";
+  display: inline-block;
+  width: 0px;
+  height: 100%;
+  vertical-align: middle;
+}
+@keyframes spin1 {
+  0% {
+    top: 60px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+  }
+  25% {
+    top: 75px;
+    left: 15px;
+    width: 0px;
+    height: 0px;
+  }
+  50% {
+    top: 60px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    top: 60px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin2 {
+  25% {
+    top: 75px;
+    left: 45px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 60px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin3 {
+  25% {
+    top: 75px;
+    left: 75px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 60px;
+    left: 60px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin4 {
+  25% {
+    top: 45px;
+    left: 15px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 30px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin5 {
+  25% {
+    top: 45px;
+    left: 45px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 30px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin6 {
+  25% {
+    top: 45px;
+    left: 75px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 30px;
+    left: 60px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin7 {
+  25% {
+    top: 15px;
+    left: 15px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin8 {
+  25% {
+    top: 15px;
+    left: 45px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 0px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+  }
+}
+@keyframes spin9 {
+  25% {
+    top: 15px;
+    left: 75px;
+    width: 0px;
+    height: 0px;
+  }
+  0%,
+  50%,
+  100% {
+    top: 0px;
+    left: 60px;
+    width: 30px;
+    height: 30px;
+  }
+}
