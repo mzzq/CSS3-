@@ -1,0 +1,182 @@
+.loader_waper {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background-color: #00bd9c;
+}
+.loader {
+  position: relative;
+  left: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+.loader div {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+}
+.loader div:nth-child(1) {
+  bottom: 50px;
+  right: 50px;
+  animation: spin1 2s linear infinite normal;
+}
+.loader div:nth-child(2) {
+  bottom: 50px;
+  left: 50px;
+  animation: spin2 2s linear infinite normal;
+}
+.loader:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50px;
+  right: 50px;
+  background-color: #ffffff;
+  animation: spin3 2s linear infinite normal;
+}
+.loader:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50px;
+  left: 50px;
+  background-color: #ffffff;
+  animation: spin4 2s linear infinite normal;
+}
+.loader_waper:after {
+  content: "";
+  width: 0px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+@keyframes spin1 {
+  0% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  12.5% {
+    opacity: 1;
+    width: 0px;
+    height: 50px;
+  }
+  13% {
+    opacity: 0;
+  }
+  25%,
+  37.5%,
+  50% {
+    opacity: 0;
+    width: 50px;
+    height: 0px;
+  }
+  62.5% {
+    opacity: 1;
+    height: 50px;
+  }
+  75%,
+  87.5%,
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+@keyframes spin2 {
+  0%,
+  12.5% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  25% {
+    opacity: 1;
+    width: 50px;
+    height: 0px;
+  }
+  26% {
+    opacity: 0;
+  }
+  37.5%,
+  50%,
+  62.5% {
+    opacity: 0;
+    width: 0px;
+    height: 50px;
+  }
+  75%,
+  87.5%,
+  100% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes spin4 {
+  0%,
+  12.5%,
+  25% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  37.5% {
+    opacity: 1;
+    width: 0px;
+    height: 50px;
+  }
+  38% {
+    opacity: 0;
+  }
+  50%,
+  65.5%,
+  75% {
+    opacity: 0;
+    width: 50px;
+    height: 0px;
+  }
+  87.5%,
+  100% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes spin3 {
+  0%,
+  12.5%,
+  25%,
+  37.5% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    opacity: 1;
+    width: 50px;
+    height: 0px;
+  }
+  51% {
+    opacity: 0;
+  }
+  65.5%,
+  75%,
+  87.5% {
+    opacity: 0;
+    width: 0px;
+    height: 50px;
+  }
+  100% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+}
