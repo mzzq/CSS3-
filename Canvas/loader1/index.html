@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loader</title>
+	<style type="text/css">
+		canvas{
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+	<script type="text/javascript" src="utils.js"></script>
+</head>
+<body>
+	<canvas id="loader"></canvas>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('loader');
+		var context=canvas.getContext('2d');
+		var ball=new Ball();
+		animateDraw(ball,context);
+		function animateDraw(){
+			window.requestAnimationFrame(animateDraw);
+			draw(ball,context);
+			ball.x++;
+			if(ball.x>=200){
+				ball.x=0;
+			}
+		}
+	}
+	function draw(ball,context){
+		context.fillStyle="#1aaf5d";
+		context.fillRect(0,0,400,200);
+		context.fillStyle=ball.color;
+		context.beginPath();
+		context.arc(ball.x,ball.y,ball.radius,0,2*Math.PI,true);
+		context.closePath();
+		context.fill();
+	}
+</script>
+</html>
