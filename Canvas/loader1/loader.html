@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>canvas loader</title>
+	<script type="text/javascript" src="utils.js"></script>
+</head>
+<body>
+	<canvas width="200" height="200" id="loader"></canvas>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var canvas=document.getElementById('loader');
+		var context=canvas.getContext('2d');
+		var balls=[];
+		var angle=0;
+		for(var i=0;i<8;i++){
+			var alph=0.2*i;
+			var ball=new Ball(100+20*Math.sin(angle),100+20*Math.cos(angle),4,"#ffffff",alph);
+			balls.push(ball);
+			angle+=Math.PI/4;
+		}
+		console.log(balls);
+		animateDraw();
+		function animateDraw(){
+			context.fillStyle="#1aaf5d";
+			context.fillRect(0,0,400,200);
+			var ball_index=0;
+			window.setInterval(function(){
+				if(ball_index>=8){
+					ball_index=0;
+					context.fillStyle="#1aaf5d";
+					context.fillRect(0,0,400,200);
+				}
+				draw(balls[ball_index],context);
+				ball_index++;
+			},120);
+		}
+	}
+</script>
+</html>
