@@ -6,15 +6,32 @@ function Ball(x=10,y=100,radius=5,color="#000000",alph=1){
 	this.alph=alph;
 }
 function draw(ball,context){
-	context.fillStyle=ball.color;
-	context.globalAlpha=ball.alph;
-	context.beginPath();
-	context.arc(ball.x,ball.y,ball.radius,0,2*Math.PI,true);
-	context.fill();
-	context.closePath();
-	if(ball.alph>=1){
-		ball.alph=0.2;
+	if(ball.alph){
+		context.fillStyle=ball.color;
+		context.globalAlpha=ball.alph;
+		context.beginPath();
+		context.arc(ball.x,ball.y,ball.radius,0,2*Math.PI,true);
+		context.fill();
+		context.closePath();
 	}else{
-		ball.alph+=0.2;
+		context.fillStyle="#1aaf5d";
+		context.globalAlpha=1;
+		context.beginPath();
+		context.arc(ball.x,ball.y,ball.radius+3,0,2*Math.PI,true);
+		context.fill();
+		context.closePath();
 	}
+	
+}
+function alphchange(balls){
+	for (var i = balls.length - 1; i >= 0; i--) {
+		if(i==balls.length-1){
+			balls[0].alph=balls[i].alph;
+		}else{
+			balls[i+1].alph=balls[i].alph;
+		}
+	}
+	var item=balls.shift();
+	balls.push(item);
+	return balls;
 }
