@@ -6,18 +6,17 @@ function Ball(x=10,y=100,radius=5,color="#000000",alph=1){
 	this.alph=alph;
 }
 function draw(ball,context){
+	context.fillStyle="#1aaf5d";
+	context.globalAlpha=1;
+	context.beginPath();
+	context.arc(ball.x,ball.y,ball.radius+3,0,2*Math.PI,true);
+	context.fill();
+	context.closePath();
 	if(ball.alph){
 		context.fillStyle=ball.color;
 		context.globalAlpha=ball.alph;
 		context.beginPath();
 		context.arc(ball.x,ball.y,ball.radius,0,2*Math.PI,true);
-		context.fill();
-		context.closePath();
-	}else{
-		context.fillStyle="#1aaf5d";
-		context.globalAlpha=1;
-		context.beginPath();
-		context.arc(ball.x,ball.y,ball.radius+3,0,2*Math.PI,true);
 		context.fill();
 		context.closePath();
 	}
