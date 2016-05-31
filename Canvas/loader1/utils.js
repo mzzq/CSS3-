@@ -6,7 +6,7 @@ function Ball(x=10,y=100,radius=5,color="#000000",alph=1){
 	this.alph=alph;
 }
 function draw(ball,context){
-	context.fillStyle="#1aaf5d";
+	context.fillStyle="#2b3e51";
 	context.globalAlpha=1;
 	context.beginPath();
 	context.arc(ball.x,ball.y,ball.radius+3,0,2*Math.PI,true);
@@ -22,12 +22,12 @@ function draw(ball,context){
 	}
 	
 }
-function alphchange(balls){
+function attributechange(balls,attribute){
 	for (var i = balls.length - 1; i >= 0; i--) {
 		if(i==balls.length-1){
-			balls[0].alph=balls[i].alph;
+			balls[0][attribute]=balls[i][attribute];
 		}else{
-			balls[i+1].alph=balls[i].alph;
+			balls[i+1][attribute]=balls[i][attribute];
 		}
 	}
 	var item=balls.shift();
