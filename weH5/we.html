@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="image/we.css">
+	<script type="text/javascript" src='Js/jquery.min.js'></script>
+	<script type="text/javascript" src='Js/options.js'></script>
+	<script type="text/javascript" src='Js/weAnimate.js'></script>
+	<script type="text/javascript" src='Js/we.js'></script>
+</head>
+<body>
+	<div id='contain'>
+		<div class="animate page1">
+			<img src="image/Penguins.jpg">
+		</div>
+		<div class="animate page2">
+			<img src="image/Koala.jpg">
+		</div>
+		<div class="animate page3">
+			<img src="image/Penguins.jpg">
+		</div>
+		<div class="animate page4">
+			<img src="image/Koala.jpg">
+		</div>
+		<div class="animate page5">
+			<img src="image/Penguins.jpg">
+		</div>
+		<div class="animate page6">
+			<img src="image/Koala.jpg">
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var mzzH5Queue=new weAnimate();
+			var page1=new weH5Page('page1',_cssop.bomSlideTopIn.beigin,_cssop.bomSlideTopIn.end,1000,false);
+			var page2=new weH5Page('page1',_cssop.bomSlideTopOut.beigin,_cssop.bomSlideTopOut.end,2000,true);
+			var page7=new weH5Page('page2',_cssop.topSlideBomIn.beigin,_cssop.topSlideBomIn.end,2000,false);
+			var page8=new weH5Page('page2',_cssop.topSlideBomOut.beigin,_cssop.topSlideBomOut.end,2000,false);
+			var page3=new weH5Page('page3',_cssop.leftSlideRightIn.beigin,_cssop.leftSlideRightIn.end,2000,false);
+			var page4=new weH5Page('page3',_cssop.leftSlideRightOut.beigin,_cssop.leftSlideRightOut.end,2000,false);
+			var page5=new weH5Page('page4',_cssop.rightSlideLeftIn.beigin,_cssop.rightSlideLeftIn.end,2000,false);
+			var page6=new weH5Page('page4',_cssop.rightSlideLeftOut.beigin,_cssop.rightSlideLeftOut.end,2000,false);
+			var page9=new weH5Page('page5',_cssop.topFadeIn.beigin,_cssop.topFadeIn.end,2000,false);
+			var page10=new weH5Page('page5',_cssop.topFadeOut.beigin,_cssop.topFadeOut.end,2000,false);
+			var page11=new weH5Page('page6',_cssop.bottomFadeIn.beigin,_cssop.bottomFadeIn.end,2000,false);
+			var page12=new weH5Page('page6',_cssop.bottomFadeOut.beigin,_cssop.bottomFadeOut.end,2000,false);
+			mzzH5Queue.addFrame(page1).addFrame(page2).addFrame(page7).addFrame(page8).addFrame(page3).addFrame(page4).addFrame(page5).addFrame(page6).addFrame(page9).addFrame(page10).addFrame(page11).addFrame(page12);
+			mzzH5Queue.next();	
+		});
+	</script>
+</body>
+</html>

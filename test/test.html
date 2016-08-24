@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	function* fn(){
+		for(var i=0;true;i++){
+			var reset=yield i;
+			if(reset){i=-1}
+		}
+	}
+	function* fibonacci(){
+		let [pre,curr]=[0,1];
+		for(;;){
+			[pre,curr]=[curr,curr+pre];
+			yield curr;
+		}
+	}
+	for(n of fibonacci()){
+		if(n>100) break;
+		console.log(n);
+	}
+</script>
+</html>
