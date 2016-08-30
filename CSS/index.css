@@ -1,0 +1,169 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	text-align: center;
+	background: black;
+}
+div{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	margin: 20px;
+}
+.bgclipalpha{
+	border:10px solid hsla(0,0%,100%,0.5);
+	background: #fb3;
+	background-clip: padding-box;
+}
+.bgshadow{
+	border-radius: 10px;
+	background: yellowgreen;
+	box-shadow: 0 0 0 10px #655,
+				0 0 0 15px #fb3,
+				0 2px 5px 15px hsla(0,0%,100%,0.5);
+}
+.bgoutline{
+	border-radius: 10px;
+	background: yellowgreen;
+	border:10px solid #655;
+	outline:5px solid #fb3;
+}
+// .bgimagepo{
+// 	padding: 10px;
+// 	background: url(user_portrait.jpg) no-repeat #58a;
+// 	background-position: left center;
+// }
+.bgimagepo{
+	padding: 10px;
+	background: url(user_portrait.jpg) no-repeat #58a;
+	background-position: calc(100% - 20px) calc(100% - 20px);
+}
+// .bgimagepo{
+// 	padding: 10px;
+// 	background: url(user_portrait.jpg) no-repeat #58a right bottom;
+// 	background-origin: content-box;
+// }
+.bgdivradius{
+	background: #58a;
+	box-shadow: 0 0 0 5px yellowgreen;
+	border-radius: 10px;
+	outline: 10px solid yellowgreen;
+}
+.bgwein1{
+	background: linear-gradient(#fb3 50%,#58a 50%);
+	background-size: 100% 60px;
+}
+.bgwein2{
+	background: linear-gradient(#fb3 30%,#58a 0);
+	background-size: 100% 60px;
+}
+.bgwein3{
+	background: linear-gradient(#fb3 33.3%,#58a 0,#58a 66.6%,yellowgreen 0);
+	background-size: 100% 60px;
+}
+
+.bgwein4{
+	background: linear-gradient(to right,#fb3 33.3%,#58a 0,#58a 66.6%,yellowgreen 0);
+	background-size: 60px 100%;
+}
+.bgwein5{
+	background: linear-gradient(45deg,#fb3 50%,#58a 0);
+	background-size: 42px 42px;
+}
+.bgwein6{
+	background: linear-gradient(45deg,#fb3 33.3%,#58a 0,#58a 66.6%,yellowgreen 0);
+	background-size: 42px 42px;
+}
+.bgwein7{
+	background: linear-gradient(45deg,#fb3 25%,#58a 25%,#58a 50%,#fb3 50%,#fb3 75%,#58a 0);
+	background-size: 42px 42px;
+}
+// .bgwein7{
+// 	background: repeating-linear-gradient(45deg,#fb3,#fb3 15px,#58a 0,#58a 30px);
+// }
+.bgwein8{
+	background: repeating-linear-gradient(45deg,#fb3,#58a 30px);
+}
+.bgwein9{
+	background: repeating-linear-gradient(30deg,yellowgreen,yellowgreen 15px,#58a 0,#58a 30px);
+}
+.bgwein10{
+	background: yellowgreen;
+	background-image: repeating-linear-gradient(30deg,hsla(0,0%,100%,.1),hsla(0,0%,100%,.1) 15px,transparent 0,transparent 30px);
+}
+.bgwein11{
+	background: #58a;
+	background-image: linear-gradient(white 2px,transparent 0),
+						linear-gradient(90deg,white 2px,transparent 0),
+						linear-gradient(hsla(0,0%,100%,0.3) 1px,transparent 0),
+						linear-gradient(90deg,hsla(0,0%,100%,0.3) 2px,transparent 0);
+
+	background-size: 60px 60px,60px 60px,15px 15px,15px 15px;
+}
+.bgwein12{
+	background: #655;
+	background-image: radial-gradient(tan 30%,transparent 0);
+	background-size: 30px 30px;
+}
+.bgwein13{
+	background: #655;
+	background-image: radial-gradient(tan 30%,transparent 0),
+						radial-gradient(tan 30%,transparent 0);
+	background-size: 30px 30px;
+	background-position: 0 0,15px 15px;
+}
+.bgwein14{
+	background: #58a;
+	background-image: linear-gradient(to top right,white 25%,transparent 0),
+	                  linear-gradient(to top right,transparent 75%,white 0);
+
+	background-size: 30px 30px;
+}
+.bgwein15{
+	background: #58a;
+	background-image: linear-gradient(to top right,white 25%,transparent 0),
+	                  linear-gradient(to top right,transparent 75%,white 0),
+	                  linear-gradient(to top right,white 25%,transparent 0),
+	                  linear-gradient(to top right,transparent 75%,white 0);
+
+	background-size: 30px 30px;
+	background-position: 0 0,15px 15px,15px 15px,30px 30px;
+}
+.bgwein16{
+	background: #58a;
+	background-image: linear-gradient(to top right,white 25%,transparent 0),
+	                  linear-gradient(to top right,transparent 75%,white 0),
+	                  linear-gradient(to top right,yellowgreen 25%,transparent 0),
+	                  linear-gradient(to top right,transparent 75%,yellowgreen 0);
+
+	background-size: 30px 30px;
+	background-position: 0 0,15px 15px,15px 15px,30px 30px;
+}
+.bgwein17{
+	background: #58a;
+	background-image: linear-gradient(to top right,#fb3 25%,transparent 0),
+	                  linear-gradient(to top right,transparent 75%,yellowgreen 0),
+	                  linear-gradient(to top right,yellowgreen 25%,transparent 0),
+	                  linear-gradient(to top right,transparent 75%,#fb3 0);
+
+	background-size: 30px 30px;
+	background-position: 0 0,15px 15px,15px 15px,30px 30px;
+}
+.bgwein18{
+	background: hsl(20,40%,90%);
+	background-image: linear-gradient(90deg,#fb3 11px,transparent 0),
+	                  linear-gradient(90deg,#ab4 23%,transparent 0),
+	                  linear-gradient(90deg,#655 25%,transparent 0);
+
+	background-size: 41px 100%,61px 100%,83px 100%;
+}
+.bgwein19{
+	background: hsl(20,40%,90%);
+	background-image: linear-gradient(90deg,#fb3 11px,transparent 0),
+	                  linear-gradient(90deg,#ab4 23%,transparent 0),
+	                  linear-gradient(90deg,#655 25%,transparent 0);
+
+	background-size: 41px 100%,61px 100%,83px 100%;
+}
