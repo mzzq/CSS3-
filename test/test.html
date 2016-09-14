@@ -2,27 +2,49 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css">
+		html,body{
+			text-align: center;
+		}
+		#parents{
+			background-color: #58a;
+			width: 100px;
+			height: 100px;
+			display: inline-block;
+		}
+		
+		#child{
+			margin-top: 40px;
+			width: 80px;
+			height: 40px;
+			border: none;
+			background-color: #00ffff;
+		}
+	</style>
 </head>
 <body>
-
+	<div id="parents">
+		<button id="child">button</button>
+		<a href="http://blog.csdn.net/mzzzzq">aaa</a>
+	</div>
 </body>
 <script type="text/javascript">
-	function* fn(){
-		for(var i=0;true;i++){
-			var reset=yield i;
-			if(reset){i=-1}
-		}
+addEvent(document.getElementById('parents'),'click',function(e){
+	if(window.addEventListener){
+		e.preventDefault();
+		
+	}else{
+		e.returnValue=false;
 	}
-	function* fibonacci(){
-		let [pre,curr]=[0,1];
-		for(;;){
-			[pre,curr]=[curr,curr+pre];
-			yield curr;
-		}
+	alert(e.srcElement.nodeName);
+	alert(e.type);
+});
+function addEvent(dom,type,fn){
+	if(window.addEventListener){
+		dom.addEventListener(type,fn);
+	}else{
+		dom.attachEvent('on'+type,fn);
 	}
-	for(n of fibonacci()){
-		if(n>100) break;
-		console.log(n);
-	}
+}
 </script>
 </html>

@@ -10,28 +10,23 @@
 <script type="text/javascript">
 	window.onload=function(){
 		var canvas=document.getElementById('loader');
-		var context=canvas.getContext('2d');
-		var balls=[];
-		var angle=0;
-		for(var i=0;i<16;i++){
-			var radius=(-16/255)*i*(i-15);
-			var ball=new Ball(100+25*Math.sin(angle),100+25*Math.cos(angle),radius,"#ffffff");
-			balls.push(ball);
-			angle+=Math.PI/8;
-		}
+		var ctx=canvas.getContext('2d');
 		animateDraw();
 		function animateDraw(){
-			context.fillStyle="#2b3e51";
-			context.fillRect(0,0,400,200);
-			var ball_index=15;
-			window.setInterval(function(){
-				if(ball_index<=0){
-					balls=attributechange(balls,"radius");
-					ball_index=15;
-				}
-				draw(balls[ball_index],context);
-				ball_index--;
-			},5);
+			ctx.fillStyle = '#d35000'
+		  	ctx.fillRect(0,0,200,200);
+		  	ctx.save();   
+		  	ctx.fillStyle = '#09F'
+		  	ctx.fillRect(15,15,170,170);
+		  	ctx.save(); 
+		  	ctx.fillStyle = '#FFF'
+		  	ctx.globalAlpha = 0.5;    
+		  	ctx.fillRect(40,40,120,120);
+		  	ctx.restore();           
+		  	ctx.fillRect(60,60,80,80);   
+		  	ctx.restore();             
+		  	ctx.fillRect(90,90,20,20);  
+		}
 		}
 	}
 </script>

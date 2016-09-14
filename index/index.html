@@ -2,6 +2,8 @@
 <html>
 	<head>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src='./utils.js'></script>
+	<script type="text/javascript" src='./index.js'></script>
 	</head>
 	<body>
 		<div>
@@ -17,10 +19,11 @@
 			<div class="loader_waper1 loader_waper2">
 				<div class="loader2"></div>
 			</div>
-			<!-- <div class="loader_waper6">
+			<div class="loader_waper6">
 				<div class="loader6"></div>
 				<div class="loader6"></div>
-			</div> -->
+				<div class="loader6"></div>
+			</div>
 			<div class="loader_waper4">
 				<div class="loader4"></div>
 			</div>
@@ -34,21 +37,32 @@
 				<div class="loader8"></div>
 				<div class="loader8"></div>
 			</div>
-			<!-- <div class="loader_waper9">
-				<div class="">
-					<div class="loader9"><div></div></div>
-					<div class="loader9"><div></div></div>
-					<div class="loader9"><div></div></div>
-				</div>
-			</div> -->
 			<div class="loader_waper9 loader_waper10">
 				<div class="">
-					<div class="loader10"><div></div></div>
-					<div class="loader10"><div></div></div>
-					<div class="loader10"><div></div></div>
+					<div class="loader10"><div></div><div></div><div></div></div>
+					<div class="loader10"><div></div><div></div><div></div></div>
+					<div class="loader10"><div></div><div></div><div></div></div>
 				</div>
 			</div>
+			<div class="loader_waper1 loader_waper11">
+				<div class="loader11"><div></div><div></div><div></div><div></div></div>
+			</div>
 		</div>
-		
+		<div>
+			<div><canvas width="200" height="200" id="canvas1"></canvas></div>
+			<div><canvas width="200" height="200" id="canvas2"></canvas></div>
+			<div><canvas width="200" height="200" id="canvas3"></canvas></div>
+			<div><canvas width="200" height="200" id="canvas4"></canvas></div>
+			<div><canvas width="200" height="200" id="canvas5"></canvas></div>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				canvasAnimate1();
+				canvasAnimate2();
+				canvasAnimate3();
+				canvasAnimate4();
+				canvasAnimate5();
+			}
+		</script>
 	</body>
 </html>

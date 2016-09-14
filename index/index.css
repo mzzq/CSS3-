@@ -4,12 +4,13 @@ body {
   letter-spacing: -3px;
 }
 body > div {
-  width: 50%;
-  margin-top: 10%;
+  // width: 50%;
+  // margin-top: 10%;
   position: relative;
   display: inline-block;
 }
 body > div div {
+  margin:5px;
   display: inline-block;
 }
 .loader_waper1 {
@@ -382,7 +383,7 @@ body > div div {
   display: inline-block;
   width: 0px;
   height: 0px;
-  border-radius: 0px;
+  border-radius: 20px;
   vertical-align: middle;
   background-color: #fffdfd;
   -webkit-animation: loader5_spin 1200ms ease-in-out 400ms infinite;
@@ -392,7 +393,7 @@ body > div div {
   display: inline-block;
   width: 0px;
   height: 0px;
-  border-radius: 0px;
+  border-radius: 20px;
   vertical-align: middle;
   background-color: #fffdfd;
   -webkit-animation: loader5_spin 1200ms ease-in-out 200ms infinite;
@@ -403,7 +404,7 @@ body > div div {
   display: inline-block;
   width: 0px;
   height: 0px;
-  border-radius: 0px;
+  border-radius: 20px;
   vertical-align: middle;
   background-color: #fffdfd;
   -webkit-animation: loader5_spin 1200ms ease-in-out infinite;
@@ -420,22 +421,18 @@ body > div div {
   0% {
     width: 0px;
     height: 0px;
-    border-radius: 0px;
   }
   33.3% {
     width: 10px;
     height: 10px;
-    border-radius: 10px;
   }
   66.7% {
     width: 20px;
     height: 20px;
-    border-radius: 20px;
   }
   100% {
     width: 0px;
     height: 0px;
-    border-radius: 0px;
   }
 }
 .loader_waper6 {
@@ -446,11 +443,9 @@ body > div div {
   text-align: center;
   background-color: #d35000;
 }
-.loader6:nth-child(2) {
-  position: absolute;
+.loader6:nth-child(3) {
+  position: relative;
   box-sizing: border-box;
-  top: 80px;
-  left: 120px;
   width: 20px;
   height: 20px;
   border-radius: 20px;
@@ -458,11 +453,9 @@ body > div div {
   -webkit-animation: loader6_spin 1200ms linear 400ms infinite normal;
   animation: loader6_spin 1200ms linear 400ms infinite normal;
 }
-.loader6:nth-child(1) {
-  position: absolute;
+.loader6:nth-child(2) {
+  position: relative;
   box-sizing: border-box;
-  top: 80px;
-  left: 90px;
   width: 20px;
   height: 20px;
   border-radius: 20px;
@@ -470,12 +463,9 @@ body > div div {
   -webkit-animation: loader6_spin 1200ms linear 200ms infinite normal;
   animation: loader6_spin 1200ms linear 200ms infinite normal;
 }
-.loader_waper6::before {
-  content: "";
+.loader6:nth-child(1) {
+  position: relative;
   box-sizing: border-box;
-  position: absolute;
-  top: 80px;
-  left: 60px;
   width: 20px;
   height: 20px;
   border-radius: 20px;
@@ -764,60 +754,59 @@ body > div div {
 .loader_waper10 {
   background-color: #d55400;
 }
-.loader10:nth-child(3)::before {
-  content: "";
+.loader10:nth-child(3) > div:nth-child(1){
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin1 2s linear infinite normal;
   animation: loader10_spin1 2s linear infinite normal;
 }
-.loader10:nth-child(3) > div {
+.loader10:nth-child(3) > div:nth-child(2) {
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin2 2s linear 200ms infinite normal;
   animation: loader10_spin2 2s linear 200ms infinite normal;
 }
-.loader10:nth-child(3)::after {
-  content: "";
+.loader10:nth-child(3) div:nth-child(3) {
+  // content: "";
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin3 2s linear 400ms infinite normal;
   animation: loader10_spin3 2s linear 400ms infinite normal;
 }
-.loader10:nth-child(2)::before {
+.loader10:nth-child(2) > div:nth-child(1) {
   content: "";
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin4 2s linear 200ms infinite normal;
   animation: loader10_spin4 2s linear 200ms infinite normal;
 }
-.loader10:nth-child(2) > div {
+.loader10:nth-child(2) > div:nth-child(2) {
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin5 2s linear 450ms infinite normal;
   animation: loader10_spin5 2s linear 450ms infinite normal;
 }
-.loader10:nth-child(2)::after {
+.loader10:nth-child(2) > div:nth-child(3) {
   content: "";
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin6 2s linear 500ms infinite normal;
   animation: loader10_spin6 2s linear 500ms infinite normal;
 }
-.loader10:nth-child(1)::before {
+.loader10:nth-child(1) > div:nth-child(1) {
   content: "";
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin7 2s linear 400ms infinite normal;
   animation: loader10_spin7 2s linear 400ms infinite normal;
 }
-.loader10:nth-child(1) > div {
+.loader10:nth-child(1) > div:nth-child(2) {
   position: absolute;
   background-color: #fffdfd;
   -webkit-animation: loader10_spin8 2s linear 500ms infinite normal;
   animation: loader10_spin8 2s linear 500ms infinite normal;
 }
-.loader10:nth-child(1)::after {
+.loader10:nth-child(1) > div:nth-child(3) {
   content: "";
   position: absolute;
   background-color: #fffdfd;
@@ -976,5 +965,175 @@ body > div div {
     left: 60px;
     width: 30px;
     height: 30px;
+  }
+}
+.loader_waper11 {
+  background-color: #00bd9c;
+}
+.loader11 {
+  position: relative;
+  left: 12.5px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+.loader11 div {
+  margin:0px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #ffffff;
+}
+.loader11 div:nth-child(2) {
+  bottom: 50px;
+  right: 50px;
+  animation: spin1 2s linear infinite normal;
+}
+.loader11 div:nth-child(3) {
+  bottom: 50px;
+  left: 50px;
+  animation: spin2 2s linear infinite normal;
+}
+.loader11 div:nth-child(4) {
+  top: 50px;
+  right: 50px;
+  background-color: #ffffff;
+  animation: spin3 2s linear infinite normal;
+}
+.loader11 div:nth-child(1) {
+  top: 50px;
+  left: 50px;
+  background-color: #ffffff;
+  animation: spin4 2s linear infinite normal;
+}
+.loader_waper11:after {
+  content: "";
+  width: 0px;
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+@keyframes spin1 {
+  0% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  12.5% {
+    opacity: 1;
+    width: 0px;
+    height: 50px;
+  }
+  13% {
+    opacity: 0;
+  }
+  25%,
+  37.5%,
+  50% {
+    opacity: 0;
+    width: 50px;
+    height: 0px;
+  }
+  62.5% {
+    opacity: 1;
+    height: 50px;
+  }
+  75%,
+  87.5%,
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+@keyframes spin2 {
+  0%,
+  12.5% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  25% {
+    opacity: 1;
+    width: 50px;
+    height: 0px;
+  }
+  26% {
+    opacity: 0;
+  }
+  37.5%,
+  50%,
+  62.5% {
+    opacity: 0;
+    width: 0px;
+    height: 50px;
+  }
+  75%,
+  87.5%,
+  100% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes spin4 {
+  0%,
+  12.5%,
+  25% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  37.5% {
+    opacity: 1;
+    width: 0px;
+    height: 50px;
+  }
+  38% {
+    opacity: 0;
+  }
+  50%,
+  65.5%,
+  75% {
+    opacity: 0;
+    width: 50px;
+    height: 0px;
+  }
+  87.5%,
+  100% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+}
+@keyframes spin3 {
+  0%,
+  12.5%,
+  25%,
+  37.5% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
+  }
+  50% {
+    opacity: 1;
+    width: 50px;
+    height: 0px;
+  }
+  51% {
+    opacity: 0;
+  }
+  65.5%,
+  75%,
+  87.5% {
+    opacity: 0;
+    width: 0px;
+    height: 50px;
+  }
+  100% {
+    opacity: 1;
+    width: 50px;
+    height: 50px;
   }
 }
